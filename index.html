@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helmet Wave Animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: 1080px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .helmet_pic {
+        max-width: 100%;
+        height: 100vh;
+      }
+
+      .circle_all_1 {
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: rotateY(120deg) rotateX(-50deg);
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 0%;
+        left: 10%;
+        z-index: 10;
+      }
+
+      .circle_all_2 {
+        transform-style: preserve-3d;
+        transform-origin: center 15%;
+        transform: rotateY(0deg) rotateX(-110deg);
+        width: 175px;
+        height: 175px;
+        position: absolute;
+        top: 0%;
+        left: 45%;
+        z-index: 10;
+      }
+
+      .circle_all_3 {
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: rotateY(-50deg) rotateX(-35deg);
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 10%;
+        right: 0%;
+        z-index: 10;
+      }
+
+      .circle_all_4 {
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: rotateY(-120deg) rotateX(35deg);
+        width: 220px;
+        height: 220px;
+        position: absolute;
+        bottom: 10%;
+        right: 0%;
+        z-index: 10;
+      }
+
+      .circle_all_5 {
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: rotateY(130deg) rotateX(35deg);
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        z-index: 10;
+      }
+
+      .c {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #5af2d8;
+        border-radius: 50%;
+      }
+
+      .c_1 {
+        animation: circle 4s linear infinite;
+      }
+
+      .c_2 {
+        animation: circle 4s linear 0.75s infinite;
+      }
+
+      .c_3 {
+        animation: circle 4s linear 1.5s infinite;
+      }
+
+      .c_4 {
+        animation: circle 4s linear 2.25s infinite;
+      }
+
+      .c_5 {
+        animation: circle 4s linear 3s infinite;
+      }
+
+      @keyframes circle {
+        0% {
+          transform: perspective(1000px) scale(1) translateZ(0px);
+          opacity: 0;
+        }
+
+        20% {
+          transform: perspective(1000px) scale(1.2) translateZ(15px);
+          opacity: 1;
+        }
+
+        40% {
+          transform: perspective(1000px) scale(1.4) translateZ(30px);
+          opacity: 1;
+        }
+
+        60% {
+          transform: perspective(1000px) scale(1.6) translateZ(45px);
+          opacity: 1;
+        }
+
+        80% {
+          transform: perspective(1000px) scale(1.8) translateZ(60px);
+          opacity: 1;
+        }
+
+        100% {
+          transform: perspective(1000px) scale(2) translateZ(75px);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="wrapper">
+        <div class="circle_all_1">
+          <div class="c c_1"></div>
+          <div class="c c_2"></div>
+          <div class="c c_3"></div>
+          <div class="c c_4"></div>
+          <div class="c c_5"></div>
+        </div>
+
+        <div class="circle_all_2">
+          <div class="c c_1"></div>
+          <div class="c c_2"></div>
+          <div class="c c_3"></div>
+          <div class="c c_4"></div>
+          <div class="c c_5"></div>
+        </div>
+
+        <div class="circle_all_3">
+          <div class="c c_1"></div>
+          <div class="c c_2"></div>
+          <div class="c c_3"></div>
+          <div class="c c_4"></div>
+          <div class="c c_5"></div>
+        </div>
+
+        <div class="circle_all_4">
+          <div class="c c_1"></div>
+          <div class="c c_2"></div>
+          <div class="c c_3"></div>
+          <div class="c c_4"></div>
+          <div class="c c_5"></div>
+        </div>
+
+        <div class="circle_all_5">
+          <div class="c c_1"></div>
+          <div class="c c_2"></div>
+          <div class="c c_3"></div>
+          <div class="c c_4"></div>
+          <div class="c c_5"></div>
+        </div>
+        <img class="helmet_pic" src="helmet.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
